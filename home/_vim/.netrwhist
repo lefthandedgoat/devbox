@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/amir'
+let g:netrw_dirhist_2='/Users/amir/projects/stockers/src/stockers'
+let g:netrw_dirhist_3='/Users/amiralirajan/Projects/wolfe'

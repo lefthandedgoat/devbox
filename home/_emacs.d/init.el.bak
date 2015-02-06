@@ -1,0 +1,187 @@
+;; require package managers, but we'll avoid them if at all possible
+(require 'package)
+
+(push '("marmalade" . "http://marmalade-repo.org/packages/")
+      package-archives )
+(push '("melpa" . "http://melpa.milkbox.net/packages/")
+      package-archives)
+
+;;=====================================
+;;plugins
+;;=====================================
+(require 'ido)
+
+
+(add-to-list 'load-path "~/.emacs.d/undo-tree")
+(add-to-list 'load-path "~/.emacs.d/evil")
+(require 'evil)
+
+(add-to-list 'load-path "~/.emacs.d/evil-leader")
+(require 'evil-leader)
+
+(add-to-list 'load-path "~/.emacs.d/color-theme")
+(require 'color-theme)
+
+(add-to-list 'load-path "~/.emacs.d/key-chord")
+(require 'key-chord)
+
+(add-to-list 'load-path "~/.emacs.d/epl")
+(add-to-list 'load-path "~/.emacs.d/s.el")
+(add-to-list 'load-path "~/.emacs.d/dash.el")
+(add-to-list 'load-path "~/.emacs.d/pkg-info.el")
+(add-to-list 'load-path "~/.emacs.d/projectile")
+(require 'projectile)
+
+(add-to-list 'load-path "~/.emacs.d/ido-vertical-mode.el")
+(require 'ido-vertical-mode)
+
+(add-to-list 'load-path "~/.emacs.d/flx")
+(require 'flx-ido)
+
+(add-to-list 'load-path "~/.emacs.d/osx-clipboard-mode")
+(require 'osx-clipboard)
+
+(add-to-list 'load-path "~/.emacs.d/expand-region.el")
+(require 'expand-region)
+
+(add-to-list 'load-path "~/.emacs.d/ace-jump-mode")
+(require 'ace-jump-mode)
+
+(add-to-list 'load-path "~/.emacs.d/scala-mode2")
+(require 'scala-mode2)
+
+(add-to-list 'load-path "~/.emacs.d/popup-el")
+(add-to-list 'load-path "~/.emacs.d/auto-complete")
+(add-to-list 'load-path "~/.emacs.d/sbt-mode")
+(add-to-list 'load-path "~/.emacs.d/ensime-emacs")
+(require 'ensime)
+(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+
+;;=====================================
+;;general configuration
+;;=====================================
+(menu-bar-mode -1) ;;remove menu bar
+(define-key global-map (kbd "RET") 'newline-and-indent) ;;auto indent on new line
+(setq-default truncate-lines t)
+
+;;=====================================
+;;evil leader
+;;=====================================
+(defun amir/eval-at-point ()
+    (interactive)
+    (when (looking-at "(")
+          (forward-sexp))
+    (eval-last-sexp nil))
+
+(global-evil-leader-mode)
+
+(evil-leader/set-leader ",")
+
+(evil-leader/set-key
+  "e" 'amir/eval-at-point
+  "j" 'ace-jump-line-mode
+  "w" 'ace-jump-char-mode
+  "g" 'projectile-find-file)
+
+;;=====================================
+;; evil configuration
+;;=====================================
+(evil-mode 1)
+
+(define-key evil-normal-state-map [escape] 'keyboard-quit) (define-key evil-visual-state-map [escape] 'keyboard-quit)
+(define-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)
+(define-key minibuffer-local-ns-map [escape] 'minibuffer-keyboard-quit)
+(define-key minibuffer-local-completion-map [escape] 'minibuffer-keyboard-quit)
+(define-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
+(define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
+
+;; Remap org-mode meta keys for convenience
+(mapcar (lambda (state)
+    (evil-declare-key state org-mode-map
+      (kbd "M-l") 'org-metaright
+      (kbd "M-h") 'org-metaleft
+      (kbd "M-k") 'org-metaup
+      (kbd "M-j") 'org-metadown
+      (kbd "M-L") 'org-shiftmetaright
+      (kbd "M-H") 'org-shiftmetaleft
+      (kbd "M-K") 'org-shiftmetaup
+      (kbd "M-J") 'org-shiftmetadown))
+  '(normal insert))
+
+(defun evil-send-string-to-terminal (string)
+  (unless (display-graphic-p) (send-string-to-terminal string)))
+
+(defun evil-terminal-cursor-change ()
+  (when (string= (getenv "TERM_PROGRAM") "iTerm.app")
+    (add-hook 'evil-insert-state-entry-hook (lambda () (evil-send-string-to-terminal "\e]50;CursorShape=1\x7")))
+    (add-hook 'evil-insert-state-exit-hook  (lambda () (evil-send-string-to-terminal "\e]50;CursorShape=0\x7"))))
+  (when (and (getenv "TMUX")  (string= (getenv "TERM_PROGRAM") "iTerm.app"))
+    (add-hook 'evil-insert-state-entry-hook (lambda () (evil-send-string-to-terminal "\ePtmux;\e\e]50;CursorShape=1\x7\e\\")))
+    (add-hook 'evil-insert-state-exit-hook  (lambda () (evil-send-string-to-terminal "\ePtmux;\e\e]50;CursorShape=0\x7\e\\")))))
+
+(evil-terminal-cursor-change)
+
+;;=====================================
+;;key chord
+;;=====================================
+(key-chord-mode 1)
+(key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
+(key-chord-define evil-insert-state-map "kj" 'evil-normal-state)
+
+
+;;=====================================
+;;color theme configuration
+;;=====================================
+(color-theme-initialize)
+(load "~/.emacs.d/color-theme/themes/railscasts-theme.el")
+
+;;=====================================
+;;projectile mode
+;;=====================================
+(projectile-global-mode)
+(setq projectile-require-project-root nil)
+
+;;=====================================
+;;projectile vertical
+;;=====================================
+(ido-mode 1)
+(ido-vertical-mode 1)
+
+(add-hook 'ido-setup-hook 'vim-like-ido-keys)
+
+(defun vim-like-ido-keys ()
+  "Add vim like keybindings for ido."
+  (define-key ido-completion-map (kbd "J") 'ido-next-match)
+  (define-key ido-completion-map (kbd "K") 'ido-prev-match)
+)
+
+;;=====================================
+;;flx fuzzy matching
+;;=====================================
+(ido-mode 1)
+(ido-everywhere 1)
+(flx-ido-mode -1)
+
+;; disable ido faces to see flx highlights.
+(setq ido-enable-flex-matching t)
+;(setq ido-use-faces nil)
+
+;;=====================================
+;;osx clipboard
+;;=====================================
+(osx-clipboard-mode 1)
+
+
+;;=====================================
+;;whitespace
+;;=====================================
+
+(defun amir/turn-on-show-trailing-whitespace ()
+  (interactive)
+  (setq show-trailing-whitespace t))
+
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+(add-hook 'prog-mode-hook 'amir/turn-on-show-trailing-whitespace)
+
+(setq-default indent-tabs-mode nil
+              tab-width 2)

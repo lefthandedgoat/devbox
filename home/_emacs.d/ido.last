@@ -1,0 +1,156 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/amiralirajan/Projects/a-wanderer/app/" . "screens_iphone_6/")
+ ("/Users/amiralirajan/Projects/a-wanderer/app/screens/" . "common/")
+ ("/" . "Applications/")
+ ("/Users/amiralirajan/Projects/synergy/src/" . "synergy/")
+ ("/Users/amiralirajan/Projects/synergy/" . "src/")
+ ("/Users/amiralirajan/projects/orgsync/" . "lib/")
+ ("/Users/amiralirajan/Projects/beautiful-go/app/" . "extensions/")
+ ("/Users/amiralirajan/Projects/coworkingdotcom/public/" . "app/")
+ ("/Users/amiralirajan/Projects/coworkingdotcom/" . "public/")
+ ("/Users/amiralirajan/Projects/" . "coworkingdotcom/")
+ ("/Users/amiralirajan/" . "Projects/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/amiralirajan/Projects/a-wanderer/app/screens_iphone_6/"
+ "/Users/amiralirajan/Projects/a-wanderer/app/screens_iphone_4_5/"
+ "/Users/amiralirajan/Projects/a-wanderer/app/"
+ "/Users/amiralirajan/Downloads/"
+ "/Users/amiralirajan/Projects/orgsync/app/longhorn_views/events/base/"
+ "/Users/amiralirajan/Projects/beautiful-go/app/lib/"
+ "/Users/amiralirajan/projects/orgsync/lib/"
+ "/Users/amiralirajan/Projects/beautiful-go/app/screens/"
+ "/Users/amiralirajan/Projects/beautiful-go/app/extensions/"
+ "/Users/amiralirajan/Projects/coworkingdotcom/public/app/"
+ "/Users/amiralirajan/Projects/orgsync/app/controllers/abstract_events/occurrences/"
+ "/Users/amiralirajan/Projects/wolfe/src/test/scala/com/orgsync/wolfe/series25/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "available_rooms.json.jbuilder"
+ "liberty.rb"
+ "active_assignment.rb"
+ "ui_color.rb"
+ "hello.cljs"
+ "SandboxSpec.scala"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/amiralirajan/Projects/a-wanderer/app/screens_iphone_6/" (21711 393 0 0) "world_screen_iphone_6.rb~" "world_screen_iphone_6.rb" "world_event_screen_iphone_6.rb~" "world_event_screen_iphone_6.rb" "world_event_screen_base_iphone_6.rb~" "world_event_screen_base_iphone_6.rb" "status_screen_iphone_6.rb~" "status_screen_iphone_6.rb" "ship_screen_iphone_6.rb~" "ship_screen_iphone_6.rb" "secrets_screen_iphone_6.rb~" "secrets_screen_iphone_6.rb" "mind_games_screen_iphone_6.rb~" "mind_games_screen_iphone_6.rb" "loot_screen_iphone_6.rb~" "loot_screen_iphone_6.rb" "game_over_screen_iphone6.rb~" "game_over_screen_iphone6.rb" "embark_screen_iphone_6.rb~" "embark_screen_iphone_6.rb" "cutscene_screen_iphone_6.rb~" "cutscene_screen_iphone_6.rb" "base_screen_iphone_6.rb~" "base_screen_iphone_6.rb" "#status_screen_iphone_6.rb#" "#base_screen_iphone_6.rb#" "../" "./")
+
+ ("/Users/amiralirajan/Projects/a-wanderer/" (21710 64389 0 0) "vendor/" "tags" "spec/" "resources/" "Rakefile" "profiles/" "Gemfile.lock" "Gemfile" "build/" "autotest.rb" "audacity/" "app/" ".ruby-version" ".repl_history" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/amiralirajan/Projects/a-wanderer/app/screens_iphone_4_5/" (21709 56179 0 0) "world_screen.rb" "world_event_screen_base.rb" "world_event_screen.rb" "status_screen.rb" "space_screen.rb" "ship_screen.rb" "secrets_screen.rb" "mind_games_screen.rb" "loot_screen.rb" "game_over_screen.rb" "embark_screen.rb" "cutscene_screen.rb" "cutscene_event_screen.rb" "battle_screen.rb" "base_screen.rb" "accessible_map_table_screen.rb" ".DS_Store" "../" "./")
+
+ ("/Users/amiralirajan/Projects/a-wanderer/app/" (21705 11259 0 0) "screens_iphone_6_plus/" "screens_iphone_6/" "screens_iphone_4_5/" "screens_common/" "lib/" "extensions/" "engine/" "app_delegate.rb" "../" "./")
+
+ ("/Users/amiralirajan/Downloads/" (21706 28217 0 0) "final.txt~" "export.rb~" "export.rb" ".localized" ".DS_Store" "#final.txt#" "../" "./")
+
+ ("/Users/amiralirajan/Projects/a-wanderer/app/screens_common/" (21578 34858 0 0) "secret_screen_common.rb" "../" "./")
+
+ ("/Users/amiralirajan/Projects/a-wanderer/app/screens/" (21696 12314 0 0) "world/" "speak_queue.rb" "secrets_screen.rb" "common/" "base_screen.rb" "accesibilty.rb" "../" "./")
+
+ ("/Applications/" (21695 15000 0 0) "Xcode.app/" "Xcode-Beta.app/" "Xamarin.iOS Build Host.app/" "Xamarin Studio.app/" "Utilities/" "Time Machine.app/" "TextEdit.app/" "System Preferences.app/" "SyphonInject.app/" "SuperCollider/" "Stickies.app/" "StarCraft II/" "Spectacle.app/" "Skype.app/" "Safari.app/" "Reminders.app/" "QuickTime Player.app/" "Preview.app/" "Photo Booth.app/" "Parallels Desktop.app/" "OBS.app/" "Numbers.app/" "Notes.app/" "Nightmod.app/" "Mission Control.app/" "Mikogo.app/" "Microsoft Office 2011/" "Messages.app/" "Maps.app/" "Mail.app/" "Launchpad.app/" "Keka.app/" "iTunes.app/" "iTerm.app/" "Image Capture.app/" "iBooks.app/" "HipChat.app/" "GoToMeeting.app/" "GoToMeeting/" "Google Chrome.app/" "GarageBand.app/" "Game Center.app/" "Font Book.app/" "Flashlight.app/" "Firefox.app/" "FaceTime.app/" "DVD Player.app/" "Duet.app/" "Dropbox.app/" "Dictionary.app/" "Diablo III/" "Dashboard.app/" "Contacts.app/" "Chess.app/" "Calendar.app/" "Calculator.app/" "Battle.net.app/" "Automator.app/" "Application Loader.app/" "App Store.app/" ".localized" ".DS_Store" "../" "./")
+
+ ("/Users/amiralirajan/" (21696 11919 0 0) "Public/" "Projects/" "Pictures/" "Notes/" "Nightmod/" "Music/" "Movies/" "log-cleaner.log" "Library/" "error.png" "dump.rdb" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "CTX.DAT" "bin/" "Applications (Parallels)/" "Applications/" ".zinc/" ".Xauthority" ".vimrc" ".viminfo" ".vim/" ".Trash/" ".tmux.conf~" ".tmux.conf" ".subversion/" ".ssh/" ".scala_history" ".sbt/" ".rnd" ".rediscli_history" ".rbenv/" ".putty/" ".pry_history" ".overtone/" ".opam/" ".ocamlinit" ".npm/" ".node-gyp/" ".netrc" ".NERDTreeBookmarks" ".mysql_history" ".m2/" ".local/" ".lldb/" ".lein/" ".ivy2/" ".itmstransporter/" ".heroku/" ".guard_history" ".gradle/" ".gnupg/" ".gitignore_global~" ".gitignore_global" ".gitconfig~" ".gitconfig" ".git-prompt.sh" ".git-completion.sh" ".gem/" ".emacs.d/" ".DS_Store" ".dropbox/" ".drip/" ".ctags" ".cordova/" ".config/" ".cocoapods/" ".citrix/" ".CFUserTextEncoding" ".cache/" ".byebug_hist" ".boot2docker/" ".bashrc~" ".bashrc" ".bash_profile~" ".bash_profile" ".bash_history" ".android/" "../" "./")
+
+ ("/Users/amiralirajan/Projects/" (21694 52942 0 0) "spritekit-101/" "slug-store/" "rms/" "rest-tictactoe/" "pomodoro-text/" "ocr-kata/" "nodekick/" "MyPlayground.playground/" "lein" "json4s/" "jo-ann/" "hello-world/" "functional-composition/" "FlappyMotion/" "disc/" "coworkingdotcom/" "combo-breaker/" "code-dojo/" "clojurescript/" "bounce/" "beautiful-go/" "an-occult/" "amirrajan.github.com/" "a-wanderer/" "a-dark-room/" ".DS_Store" "../" "./")
+
+ ("/Users/amiralirajan/Projects/beautiful-go/app/extensions/" (21695 4333 0 0) "ui_view.rb~" "ui_view.rb" "ui_color.rb~" "ui_color.rb" "ui_button.rb~" "ui_button.rb" "../" "./")
+
+ ("/Users/amiralirajan/Projects/beautiful-go/app/screens/" (21695 13902 0 0) "ui_color.rb~" "root_screen_iphone_6_plus.rb~" "root_screen_iphone_6_plus.rb" "root_screen_iphone_6.rb~" "root_screen_iphone_6.rb" "root_screen_iphone_5.rb~" "root_screen_iphone_5.rb" "root_screen_iphone_4_5.rb~" "root_screen_iphone_4.rb" "root_screen_ipad.rb" "root_screen_common.rb~" "root_screen_common.rb" "root_screen.rb~" "../" "./")
+
+ ("/Users/amiralirajan/Projects/beautiful-go/app/lib/" (21695 5011 0 0) "thirteen_board.rb~" "thirteen_board.rb" "nineteen_by_ninteen_board.rb~" "nineteen_board.rb~" "nineteen_board.rb" "nine_board.rb~" "nine_board.rb" "liberty.rb" "five_board.rb~" "five_board.rb" "board.rb~" "board.rb" "../" "./")
+
+ ("/Users/amiralirajan/Projects/a-wanderer/app/screens/world/" (21606 4487 0 0) "world_screen.rb" "world_event_screen_base.rb" "world_event_screen.rb" "supplies_data_source.rb" "status_screen.rb" "space_screen.rb" "ship_screen.rb" "mind_games_screen.rb" "loot_screen.rb" "game_over_screen.rb" "embark_screen.rb" "cutscene_screen.rb" "cutscene_event_screen.rb" "battle_screen.rb" "accessible_map_table_screen.rb" "../" "./")
+
+ ("/Users/amiralirajan/Projects/orgsync/app/models/events/" (21678 41811 0 0) "opportunity.rb" "event_request.rb" "event_occurrence.rb" "event_member.rb" "event_exports.rb" "event_date.rb" "event_category.rb" "event.rb" "../" "./")
+
+ ("/Users/amiralirajan/Projects/synergy/src/synergy/" (21653 44388 0 0) "core.cljs" "../" "./")
+
+ ("/Users/amiralirajan/Projects/synergy/src/" (21653 44388 0 0) "synergy/" "../" "./")
+
+ ("/Users/amiralirajan/Projects/synergy/" (21653 44461 0 0) "synergy.js" "src/" "project.clj" "out/" "index.html" ".gitignore" "../" "./")
+
+ ("/Users/amiralirajan/Projects/orgsync/" (21649 45752 0 0) "vendor/" "Vagrantfile" "tmp/" "tags" "spec/" "script/" "README.md" "Rakefile" "public/" "Procfile.vagrant" "package.json" "node_modules/" "log-cleaner.log" "log/" "lib/" "Guardfile" "gems/" "Gemfile.lock" "Gemfile" "dump.rdb" "docs/" "DB_TEMPLATE.md" "db/" "config.ru" "config/" "Capfile" "bower_components/" "bower.json" "app/" ".simplecov" ".ruby-version" ".rubocop.yml" ".rspec" ".rbenv-vars" ".projectile" ".jshintrc" ".gitignore" ".git/" "._tmux.conf~" "._tmux.conf" "._auto_test.rb~" "._auto_test.rb" "../" "./")
+
+ ("/Users/amiralirajan/Projects/orgsync/app/longhorn_views/" (21611 29963 0 0) "welcome/" "todo_lists/" "todo_items/" "sms/" "register/" "qna/" "profile/" "polls/" "photos/" "orgsync/" "notifications/" "news_posts/" "messages/" "events/" "connect/" "comments/" "chapter/" "application/" "albums/" "abstract_events/" "../" "./")
+
+ ("/Users/amiralirajan/Projects/orgsync/app/longhorn_views/events/" (21595 45036 0 0) "requests/" "base/" "../" "./")
+
+ ("/Users/amiralirajan/Projects/orgsync/app/longhorn_views/events/base/" (21648 16861 0 0) "upcoming_events_panel.html.erb" "past_events_panel.html.erb" "ongoing_events_panel.html.erb" "ongoing.html.erb" "index.html.erb" "available_rooms.json.jbuilder" "_upload_pic.html.erb" "_required_details.html.erb" "_recurring_options.html.erb" "_occurrences_panel.html.erb" "_edit_delete_actions.html.erb" "#_required_details.html.erb#" "../" "./")
+
+ ("/Users/amiralirajan/projects/orgsync/lib/" (21637 44618 0 0) "wildcard_constraints.rb" "top_videos.rb" "top_portals.rb" "top_portal_content.rb" "top_modules.rb" "top_files.rb" "top_custom_pages.rb" "top_bookmarks.rb" "timelines/" "time_zone_utility.rb" "tasks/" "string_tokenizer.rb" "stoplight/" "shrimp.rb" "shib_attribute_mapper.rb" "serializing_responder.rb" "serializer.rb" "scratch_pad.rb" "resque_failures/" "resolves_duplicate_responses.rb" "requests/" "redis_with_metrics.rb" "rails_metrics.rb" "query_utility.rb" "queries/" "qna.rb" "qna/" "premium_logging.rb" "prawn_helper.rb" "portal_attribute_policy.rb" "ping/" "pdf/" "payments.rb" "patterns/" "osc.rb" "org_profile_presenter.rb" "nested_router.rb" "nbuilder.rb" "naming_utility.rb" "mysql_timeout.rb" "mobile-fu/" "mini_magick.rb" "menus.rb" "menus/" "markup_handler.rb" "mark_deleted.rb" "kompressor.rb" "jsonp_middleware.rb" "invite_utility.rb" "interaction/" "facebook.rb" "extranetable.rb" "extranet_templates/" "exports/" "event_request_policy.rb" "email_tokenizer.rb" "elasticsearch_manager.rb" "delivery_changes_mail_interceptor.rb" "decorator.rb" "debug_tools.rb" "dbtemplate/" "db_partitioner.rb" "db_connection.rb" "db_cleaner.rb" "csv_hash.rb" "core_extensions.rb" "context.rb" "context/" "constraints/" "community_home_source_manager.rb" "co_curricular_transcript.rb" "asset_manager.rb" "api_errors.rb" "api/" "acts_as_collected_list.rb" "active_assignment.rb" "../" "./")
+
+ ("/Users/amiralirajan/Projects/beautiful-go/app/" (21644 13582 0 0) "screens/" "extensions/" "app_delegate.rb~" "app_delegate.rb" "../" "./")
+
+ ("/Users/amiralirajan/Projects/beautiful-go/" (21643 45419 0 0) "vendor/" "spec/" "resources/" "Rakefile~" "Rakefile" "Gemfile~" "Gemfile.lock" "Gemfile" "build/" "app/" ".repl_history" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/amiralirajan/Projects/coworkingdotcom/public/app/" (21643 9955 0 0) "hello.cljs~" "cowokring.cljs" "../" "./")
+
+ ("/Users/amiralirajan/Projects/wolfe/src/test/scala/com/orgsync/wolfe/series25/" (21614 7423 0 0) "SpaceSearchResourceSpec.scala" "SandboxSpec.scala" "IntegrationAuditSpec.scala" "EventsResourceSpec.scala" "../" "./")
+
+ ("/Users/amiralirajan/Projects/orgsync/app/controllers/abstract_events/occurrences/" (21641 63802 0 0) "participants/" "messages_controller.rb" "invites_controller.rb" "checkin_settings_controller.rb" "base_controller.rb" "../" "./")
+
+ ("/Users/amiralirajan/Projects/coworkingdotcom/public/" (21643 7671 0 0) "app/" "../" "./")
+
+ ("/Users/amiralirajan/Projects/coworkingdotcom/" (21643 7727 0 0) "views/" "twitter-app-settings.png" "server.js" "server/" "README.md" "public/" "package.json" "node_modules/" "license.txt" "Gruntfile.js" "create-twitter-app.png" "create-twitter-app-2.png" "bower_components/" "bower.json" ".gitignore" ".git/" ".env~" ".env" "../" "./")
+
+ ("/Users/amiralirajan/Projects/coworkingdotcom/server/" (21643 7662 0 0) "models/" "controllers/" "config/" "../" "./")
+
+ ("/Users/amiralirajan/.emacs.d/" (21639 12689 0 0) "railscasts-theme/" "projectile.cache" "projectile-bookmarks.eld" "pkg-info.el/" "key-chord/" "init.el~" "init.el.bak~" "init.el.bak" "init.el" "ido.last~" "ido.last" "flx/" "epl/" "elpa/" "auto-save-list/" "ac-comphist.dat" ".achievements" "#init.el#" "../" "./")
+
+ ("/Users/amiralirajan/Projects/a-dark-room/" (21625 52826 0 0) "vendor/" "ui_automation/" "tmux.conf" "tags" "spec/" "resources/" "Rakefile" "profiles/" "javascript-version/" "Gemfile.lock" "Gemfile" "dev.rb" "build/" "app/" ".swo" ".ruby-version" ".repl_history" ".gitignore" ".git/" ".DS_Store" ".dat73ca.001" ".dat382b.002" ".dat3208.001" ".dat2c86.003" "../" "./")
+
+ ("/Users/amiralirajan/Projects/wolfe/" (21614 11162 0 0) "wolfe.gemspec" "target/" "src/" "README.md" "Rakefile" "project/" "log/" "Gemfile.lock" "Gemfile" "circle.yml" "build.sbt" "bin/" "autotest.rb" "assembly.sbt" ".ruby-version" ".gitignore" ".git/" ".ensime_cache/" ".ensime" ".ackrc" "../" "./")
+
+ ("/Users/" (21577 46798 0 0) "Shared/" "Guest/" "amiralirajan/" ".localized" "../" "./")
+
+ ("/Users/amiralirajan/projects/" (21608 46119 0 0) "wolfe/" "timeline/" "smu/" "scalatest/" "rms/" "ProgrammaticButton/" "orgsync/" "log-cleaner.log" "lein" "katanspec/" "hello-world/" "coworkingdotcom/" "an-occult/" "a-wanderer/" "a-dark-room/" ".DS_Store" "../" "./")
+
+ ("/Users/amiralirajan/projects/orgsync/" (21612 50048 0 0) "vendor/" "Vagrantfile" "tmp/" "tags" "spec/" "script/" "README.md" "Rakefile" "public/" "Procfile.vagrant" "package.json" "node_modules/" "log-cleaner.log" "log/" "lib/" "Guardfile" "gems/" "Gemfile.lock" "Gemfile" "dump.rdb" "docs/" "DB_TEMPLATE.md" "db/" "config.ru" "config/" "Capfile" "bower_components/" "bower.json" "app/" ".simplecov" ".ruby-version" ".rubocop.yml" ".rspec" ".rbenv-vars" ".projectile" ".jshintrc" ".gitignore" ".git/" "._tmux.conf" "._auto_test.rb" "../" "./")
+
+ ("/Users/amiralirajan/projects/orgsync/app/" (21578 35043 0 0) "workers/" "views/" "validators/" "services/" "serializers/" "presenters/" "node/" "modules/" "models/" "mailers/" "longhorn_views/" "interactions/" "inputs/" "helpers/" "controllers/" "assets/" "../" "./")
+
+ ("/Users/amiralirajan/projects/orgsync/app/services/" (21612 50138 0 0) "timelines/" "sso_service.rb" "room_reservation_service.rb" "nonce_service.rb" "../" "./")
+
+ ("/Users/amiralirajan/projects/wolfe/" (21595 59374 0 0) "wolfe.gemspec" "wolfe-0.1.0.gem" "target/" "src/" "README.md" "Rakefile" "project/" "Gemfile.lock" "Gemfile" "build.sbt" "autotest.rb" "assembly.sbt" ".ruby-version" ".gitignore" ".git/" ".ackrc" "#.ackrc#" "../" "./")
+
+ ("/Users/amiralirajan/projects/wolfe/src/" (21582 20827 0 0) "test/" "main/" "../" "./")
+
+ ("/Users/amiralirajan/projects/wolfe/src/main/" (21582 20827 0 0) "scala/" "ruby/" "resources/" "../" "./")
+
+ ("/Users/amiralirajan/projects/wolfe/src/main/scala/" (21582 20827 0 0) "com/" "../" "./")
+
+ ("/Users/amiralirajan/projects/wolfe/src/main/scala/com/" (21582 20827 0 0) "orgsync/" "../" "./")
+
+ ("/Users/amiralirajan/projects/wolfe/src/main/scala/com/orgsync/" (21582 20827 0 0) "wolfe/" "../" "./")
+
+ ("/Users/amiralirajan/projects/wolfe/src/main/scala/com/orgsync/wolfe/" (21582 20827 0 0) "Settings.scala" "series25/" "persistence/" "domain/" "api/" "../" "./")
+
+ ("/Users/amiralirajan/projects/wolfe/src/main/scala/com/orgsync/wolfe/api/" (21595 58056 0 0) "Service.scala" "ReservationsService.scala" "Model.scala" "JsonHttpService.scala" "Boot.scala" "../" "./")
+
+ ("/Users/amiralirajan/Projects/wolfe/src/" (21582 20827 0 0) "test/" "main/" "../" "./")
+
+ ("/Users/amiralirajan/Projects/wolfe/src/main/" (21582 20827 0 0) "scala/" "ruby/" "resources/" "../" "./")
+
+ ("/Users/amiralirajan/Projects/wolfe/src/main/scala/" (21582 20827 0 0) "com/" "../" "./")
+
+ ("/Users/amiralirajan/Projects/wolfe/src/main/scala/com/" (21582 20827 0 0) "orgsync/" "../" "./")
+
+ ("/Users/amiralirajan/Projects/wolfe/src/main/scala/com/orgsync/" (21582 20827 0 0) "wolfe/" "../" "./")
+
+ ("/Users/amiralirajan/Projects/wolfe/src/main/scala/com/orgsync/wolfe/" (21582 20827 0 0) "Settings.scala" "series25/" "persistence/" "domain/" "api/" "../" "./")
+
+ ("/Users/amiralirajan/Projects/wolfe/src/main/scala/com/orgsync/wolfe/api/" (21595 56579 0 0) "Service.scala" "ReservationsService.scala" "Model.scala" "JsonHttpService.scala" "Boot.scala" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

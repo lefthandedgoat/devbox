@@ -1,0 +1,1 @@
+#s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8 data ("/usr/local/" ("Cellar/emacs/24.4/share/emacs/24.4/lisp/indent.el.gz" "Cellar/emacs/24.4/share/emacs/24.4/lisp/progmodes/ruby-mode.el.gz" "Cellar/emacs/24.4/share/emacs/24.4/etc/COPYING")))
