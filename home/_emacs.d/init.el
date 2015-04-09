@@ -1,8 +1,8 @@
 ;; require package managers, but we'll avoid them if at all possible
 (require 'package)
 
-(push '("melpa" . "http://melpa.milkbox.net/packages/")
-      package-archives)
+(push '("melpa" . "http://melpa.milkbox.net/packages/") package-archives)
+(push '("org" . "http://orgmode.org/elpa/") package-archives)
 
 ;;=====================================
 ;;plugins
@@ -29,6 +29,7 @@
    clojure-mode
    cider
    magit
+   2048-game
    markdown-mode
    projectile))
 
@@ -41,15 +42,15 @@
   (unless (package-installed-p package)
     (package-install package)))
 
-(require 'ido)
 (require 'exec-path-from-shell)
 (require 'evil)
 (require 'evil-leader)
 (require 'color-theme)
 (require 'key-chord)
-(require 'projectile)
+(require 'ido)
 (require 'ido-vertical-mode)
 (require 'flx-ido)
+(require 'projectile)
 (require 'osx-clipboard)
 (require 'expand-region)
 (require 'ace-jump-mode)
@@ -81,22 +82,55 @@
     (shell-command (concat "touch " (shell-quote-argument buffer-file-name)))
     (clear-visited-file-modtime)))
 
+(defun amir/tab-space-four ()
+  "Sets javascript and default tab space to four spaces."
+  (interactive)
+  (setq js-indent-level 4)
+  (setq default-tab-width 4))
+
+(defun amir/next-search-to-top ()
+  "Primarily for presentations, finds next occurence of string and scrolls it to the top"
+  (interactive)
+  (progn
+    (call-interactively (evil-next-search 1))
+    (call-interactively (evil-scroll-line-to-top))))
+
+(defun amir/previous-search-to-top ()
+  "Primarily for presentations, finds previous occurence of string and scrolls it to the top"
+  (interactive)
+  (progn
+    (evil-previous-search 1)
+    (evil-scroll-line-to-top)))
+
+(defun amir/tab-space-two ()
+  "Sets javascript and default tab space to two spaces."
+  (interactive)
+  (setq js-indent-level 2)
+  (setq default-tab-width 2))
+
 (global-evil-leader-mode)
 
 (evil-leader/set-leader ",")
 
 (evil-leader/set-key
   "e" 'cider-eval-defun-at-point
-  "E" 'eval-defun
-  "j" 'ace-jump-line-mode
-  "w" 'ace-jump-char-mode
+  "E" 'eval-last-sexp
+  "w" 'web-mode
+  "j" 'ace-jump-char-mode
   "m" 'evil-window-vnew
   "g" 'projectile-find-file
   "t" 'amir/touch
+  "a" 'amir/foo-inline
   "f" 'next-error
   "d" 'previous-error
   "b" 'ido-switch-buffer
-  "-" 'ido-dired
+  "." 'ido-dired
+  "s" 'magit-status
+  "h" 'vc-print-log
+  "4" 'amir/tab-space-four
+  "2" 'amir/tab-space-two
+  "n" 'amir/next-search-to-top
+  "p" 'amir/previous-search-to-top
   "i" 'install-packages)
 
 ;;=====================================
@@ -141,8 +175,8 @@
 ;;key chord
 ;;=====================================
 (key-chord-mode 1)
-(key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
-(key-chord-define evil-insert-state-map "kj" 'evil-normal-state)
+;;(key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
+;;(key-chord-define evil-insert-state-map "kj" 'evil-normal-state)
 
 
 ;;=====================================
@@ -169,7 +203,38 @@
   "Add vim like keybindings for ido."
   (define-key ido-completion-map (kbd "J") 'ido-next-match)
   (define-key ido-completion-map (kbd "K") 'ido-prev-match)
+  (define-key ido-completion-map (kbd "C-j") 'ido-next-match)
+  (define-key ido-completion-map (kbd "C-k") 'ido-prev-match)
 )
+
+
+;;=====================================
+;;color changes
+;;=====================================
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(col-highlight ((t (:background "color-233"))))
+ '(diff-added ((t (:inherit diff-changed :background "#ddffdd" :foreground "black"))))
+ '(diff-header ((t (:background "grey80" :foreground "black"))))
+ '(diff-removed ((t (:inherit diff-changed :background "#ffdddd" :foreground "black"))))
+ '(hl-line ((t (:background "color-233"))))
+ '(lazy-highlight ((t (:background "black" :foreground "white" :underline t))))
+ '(neo-dir-link-face ((t (:foreground "cyan"))))
+ '(neo-file-link-face ((t (:foreground "white"))))
+ '(secondary-selection ((t (:background "color-236"))))
+ '(shadow ((t (:foreground "cyan"))))
+ '(web-mode-html-tag-bracket-face ((t (:foreground "color-250"))))
+ '(web-mode-html-tag-face ((t (:foreground "yellow")))))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
 
 ;;=====================================
 ;;flx fuzzy matching
@@ -186,7 +251,6 @@
 ;;osx clipboard
 ;;=====================================
 (osx-clipboard-mode 1)
-
 
 ;;=====================================
 ;;whitespace
@@ -281,12 +345,3 @@
      (with-current-buffer buffer
        (buffer-string))))
   (message "Output copied to kill ring"))
-
-
-;;=====================================
-;; search highlight and cursors
-;;=====================================
-(custom-set-faces
- '(col-highlight ((t (:background "color-233"))))
- '(hl-line ((t (:background "color-233"))))
- '(lazy-highlight ((t (:background "black" :foreground "white" :underline t)))))
