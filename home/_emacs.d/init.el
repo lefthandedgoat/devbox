@@ -345,3 +345,11 @@
      (with-current-buffer buffer
        (buffer-string))))
   (message "Output copied to kill ring"))
+
+;;=====================================
+;;change auto save directory
+;;=====================================
+(setq backup-directory-alist
+  `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+  `((".*" ,temporary-file-directory t)))
